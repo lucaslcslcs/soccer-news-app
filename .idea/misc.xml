@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/workspace/SoccerNews/app/src/main/res/layout/activity_main.xml" value="0.10572916666666667" />
+        <entry key="..\:/workspace/SoccerNews/app/src/main/res/layout/fragment_favorites.xml" value="0.1" />
+        <entry key="..\:/workspace/SoccerNews/app/src/main/res/layout/fragment_news.xml" value="0.1" />
       </map>
     </option>
   </component>
