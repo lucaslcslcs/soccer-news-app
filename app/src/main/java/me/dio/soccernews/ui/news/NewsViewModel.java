@@ -17,9 +17,9 @@ public class NewsViewModel extends ViewModel{
 
         //TODO Remover Mock de Noticias
         List<News> news = new ArrayList<>();
-        news.add(new News("Ferroviaria tem desfalque importante",""));
-        news.add(new News("Ferrinha jogo sabado",""));
-        news.add(new News( "Copa do Mundo Feminina esta terminando",""));
+        news.add(new News("Ferroviaria tem desfalque importante","aa"));
+        news.add(new News("Ferrinha jogo sabado","aa"));
+        news.add(new News("Copa do Mundo Feminina esta terminando","aa"));
 
         this.news.setValue(news);
 
