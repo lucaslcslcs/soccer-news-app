@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
+
 
 android {
     compileSdk 32
@@ -49,6 +51,10 @@ dependencies {
     //Reference: https://developer.android.com/training/data-storage/room
     implementation "androidx.room:room-runtime:2.4.2"
     annotationProcessor "androidx.room:room-compiler:2.4.2"
+
+    //Reference: https://console.firebase.google.com/u/0/project/soccer-news-app-9b2a0/overview?hl=pt-br
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
 
     testImplementation 'junit:junit:4.13.2'
 
