@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import me.dio.soccernews.MainActivity;
 import me.dio.soccernews.databinding.FragmentNewsBinding;
 import me.dio.soccernews.ui.adapter.NewsAdapter;
 
@@ -24,12 +25,30 @@ public class NewsFragment extends Fragment {
         View root = binding.getRoot();
 
         binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
-        newsViewModel.getNews().observe(getViewLifecycleOwner(), news ->
-                binding.rvNews.setAdapter(new NewsAdapter(news, view -> {
+        newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
+            binding.rvNews.setAdapter(new NewsAdapter(news, updatedNews -> {
+                MainActivity activity = (MainActivity) getActivity();
+                if (activity != null) {
+                    activity.getDb().newsDao().save(updatedNews);
+                }
+            }));
+        });
 
-                })));
+        newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
+            switch (state) {
+                case DOING:
+                    //TODO: Iniciar SwipeRefreshLayout (loading).
+                    break;
+                case DONE:
+                    //TODO: Finalizar SwipeRefreshLayout (loading).
+                    break;
+                case ERROR:
+                    //TODO: Finalizar SwipeRefreshLayout (loading).
+                    //TODO: Mostrar um erro genérico.
+            }
+        });
 
-    return root;
+        return root;
     }
 
     @Override
@@ -37,4 +56,6 @@ public class NewsFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
 }
