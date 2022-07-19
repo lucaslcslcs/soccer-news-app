@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.List;
 
-import me.dio.soccernews.MainActivity;
+import me.dio.soccernews.ui.MainActivity;
 import me.dio.soccernews.databinding.FragmentFavoritesBinding;
 import me.dio.soccernews.domain.News;
 import me.dio.soccernews.ui.adapter.NewsAdapter;
