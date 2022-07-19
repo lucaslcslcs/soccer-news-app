@@ -50,6 +50,7 @@ dependencies {
 
     //Reference: https://developer.android.com/training/data-storage/room
     implementation "androidx.room:room-runtime:2.4.2"
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     annotationProcessor "androidx.room:room-compiler:2.4.2"
 
     //Reference: https://console.firebase.google.com/u/0/project/soccer-news-app-9b2a0/overview?hl=pt-br
