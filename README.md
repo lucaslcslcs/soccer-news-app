@@ -1,6 +1,6 @@
-# BootCamp Santander Mobile DIO
+<h1 align="center"> BootCamp Santander Mobile DIO </h1>
 
-# Soccer News App
+<h2 align="center"> Soccer News App </h2>
 
 App Nativo Android de Notícias Sobre Futebol Feminino (Mês da Mulher). Este repositório foi organizado em algumas branches que representam as implementações realizadas durante os seguintes conteúdos/vídeos:
 
